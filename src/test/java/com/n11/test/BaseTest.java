@@ -12,6 +12,7 @@ public class BaseTest {
 
     @Before
     public void startUp() {
+        Locale.setDefault(new Locale("en", "EN"));
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://www.n11.com");
