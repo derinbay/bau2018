@@ -18,7 +18,7 @@ public class ProductPage extends BasePage {
     }
 
     public String getProductName() {
-        return driver.findElement(productTitle).getText();
+        return findElementWhenVisible(productTitle).getText();
     }
 
     public MyCartPage goToCart() {

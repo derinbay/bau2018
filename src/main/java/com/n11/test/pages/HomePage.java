@@ -15,14 +15,12 @@ public class HomePage extends BasePage {
     By firstProduct = By.cssSelector(".catGroup .tabPanel.active li");
 
     public LoginPage clickToLogin() {
-        driver.findElement(By.cssSelector(".btnSignIn")).click();
+    	findElementWhenVisible(By.cssSelector(".btnSignIn")).click();
         return new LoginPage(driver);
     }
 
     public String getUserName() {
-        return driver
-                .findElement(By.className("user"))
-                .getText();
+        return findElementWhenVisible(By.className("user")).getText();
     }
 
     public RegisterPage clickRegisterButton() {
@@ -37,7 +35,7 @@ public class HomePage extends BasePage {
     }
 
     public ProductPage getFirstProduct() {
-        driver.findElement(firstProduct).click();
+        findElementWhenVisible(firstProduct).click();
         return new ProductPage(driver);
     }
 }

@@ -31,6 +31,6 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isErrorDisplayed(String warning) {
-        return driver.findElement(By.cssSelector("[data-errormessagefor=" + warning + "]")).isDisplayed();
+        return findElementWhenVisible(By.cssSelector("[data-errormessagefor=" + warning + "]")).isDisplayed();
     }
 }

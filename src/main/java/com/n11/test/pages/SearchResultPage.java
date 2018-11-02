@@ -13,6 +13,6 @@ public class SearchResultPage extends BasePage {
 //        WebElement element = driver.findElement(By.cssSelector(".resultText > h1"));
 //        String text = element.getText();
 //        return text;
-        return driver.findElement(By.cssSelector(".resultText > h1")).getText();
+        return findElementWhenVisible(By.cssSelector(".resultText > h1")).getText();
     }
 }
