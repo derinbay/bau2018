@@ -14,6 +14,12 @@ public class BaseTest {
     public void startUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+//        ChromeOptions options = new ChromeOptions();
+//        try {
+//            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
         driver.get("https://www.n11.com");
     }
 
